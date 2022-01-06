@@ -1,0 +1,61 @@
+{
+  "name": "vuetom-cli",
+  "version": "0.1.0",
+  "description": "A simple CLI for vitepress-theme-vuetom",
+  "scripts": {
+    "cli": "node bin/cli.js",
+    "cli:init": "node bin/cli.js init",
+    "cli:list": "node bin/cli.js list",
+    "tsc": "npm run clean && tsc",
+    "clean": "rimraf bin",
+    "eslint": "eslint src --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "vuetom-cli": "bin/cli",
+    "vuetom-cli init": "bin/cli-init",
+    "vuetom-cli list": "bin/cli-list"
+  },
+  "files": [
+    "bin/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauset/vuetom-cli.git"
+  },
+  "keywords": [
+    "vitepress",
+    "theme",
+    "vue",
+    "cli"
+  ],
+  "author": "lauset",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lauset/vuetom-cli/issues"
+  },
+  "homepage": "https://github.com/lauset/vuetom-cli",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "download-git-repo": "^1.1.0",
+    "inquirer": "^6.5.2",
+    "ora": "^3.4.0",
+    "request": "^2.88.2",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/events": "^3.0.0",
+    "@types/glob": "^7.2.0",
+    "@types/json-schema": "^7.0.9",
+    "@types/minimatch": "^3.0.5",
+    "@types/node": "^16.11.19",
+    "@types/unist": "^2.0.6",
+    "@types/vfile": "^3.0.2",
+    "@types/vfile-message": "^1.0.1",
+    "@typescript-eslint/parser": "^2.5.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "typescript": "^4.5.4"
+  }
+}
