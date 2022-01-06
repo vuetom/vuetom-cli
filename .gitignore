@@ -1,4 +1,4 @@
 node_modules/
 bin/
-package-lock
+package-lock.json
 yarn.lock
