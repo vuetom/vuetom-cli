@@ -2,30 +2,31 @@
 
 <h1 align="center">
 	<br>
-	<br>
-	<img width="320" src="media/logo.svg" alt="vuetom-cli">
-	<br>
-	<br>
+	<img width="320" src="media/vuetom-logo-m.png" alt="vuetom-cli">
 	<br>
 </h1>
 
 > Blog & Documents generation tool
 
-## [CHANGELOG]()
+## Links
+
+[npm](https://www.npmjs.com/package/vuetom-cli)
+
+[github](https://github.com/lauset/vuetom-cli)
 
 ## Install
 
 **npm**
 
 ```bash
-npm install @lauset/vuetom-cli -g
+npm install vuetom-cli -g
 vuetom-cli --help
 ```
 
 **yarn**
 
 ```bash
-yarn global add @lauset/vuetom-cli
+yarn global add vuetom-cli
 vuetom-cli --help
 ```
 
@@ -52,7 +53,7 @@ vuetom-cli --help
 # Compiling TS files
 npm run tsc
 
-# Run Cli
+# Test Cli
 npm run cli
 
 # Initialize theme project
