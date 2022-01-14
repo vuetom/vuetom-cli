@@ -1,0 +1,110 @@
+{
+  "zh-CN": [
+    {
+      "text": "指引",
+      "link": "/guide",
+      "children": [
+        {
+          "text": "什么是Vitepress?",
+          "link": "/info"
+        },
+        {
+          "text": "文档目录",
+          "link": "/prodir"
+        }
+      ]
+    },
+    {
+      "text": "UI组件",
+      "link": "/menu",
+      "children": [
+        {
+          "text": "按钮",
+          "link": "/button"
+        },
+        {
+          "text": "代码块",
+          "link": "/codeblock"
+        }
+      ]
+    },
+    {
+      "text": "主题与样式",
+      "link": "/styl",
+      "children": [
+        {
+          "text": "颜色",
+          "link": "/colors"
+        }
+      ]
+    },
+    {
+      "text": "Markdown示例",
+      "link": "/mdshow",
+      "children": [
+        {
+          "text": "示例",
+          "link": "/example"
+        },
+        {
+          "text": "自定义语法",
+          "link": "/custom"
+        }
+      ]
+    }
+  ],
+  "en-US": [
+    {
+      "text": "Guide",
+      "link": "/guide",
+      "children": [
+        {
+          "text": "WTF Vitepress?",
+          "link": "/info"
+        },
+        {
+          "text": "Project Dir",
+          "link": "/prodir"
+        }
+      ]
+    },
+    {
+      "text": "Components",
+      "link": "/menu",
+      "children": [
+        {
+          "text": "Button",
+          "link": "/button"
+        },
+        {
+          "text": "CodeBlock",
+          "link": "/codeblock"
+        }
+      ]
+    },
+    {
+      "text": "Style And Theme",
+      "link": "/styl",
+      "children": [
+        {
+          "text": "Colors",
+          "link": "/colors"
+        }
+      ]
+    },
+    {
+      "text": "Markdown Ex",
+      "link": "/mdshow",
+      "children": [
+        {
+          "text": "Example",
+          "link": "/example"
+        },
+        {
+          "text": "Custom md",
+          "link": "/custom"
+        }
+      ]
+    }
+  ]
+}

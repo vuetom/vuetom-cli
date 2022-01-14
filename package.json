@@ -1,61 +1,42 @@
 {
-  "name": "vuetom-cli",
-  "version": "0.1.0",
-  "description": "A simple CLI for vitepress-theme-vuetom",
+  "name": "vuetom-doc",
+  "version": "0.0.2",
+  "description": "desc",
   "scripts": {
-    "cli": "node bin/cli.js",
-    "cli:init": "node bin/cli.js init",
-    "cli:list": "node bin/cli.js list",
-    "tsc": "npm run clean && tsc",
-    "clean": "rimraf bin",
-    "eslint": "eslint src --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vitepress dev .",
+    "build": "vitepress build .",
+    "serve": "vitepress serve .",
+    "clean": "rimraf .vitepress/dist"
   },
-  "bin": {
-    "vuetom-cli": "bin/cli",
-    "vuetom-cli init": "bin/cli-init",
-    "vuetom-cli list": "bin/cli-list"
-  },
-  "files": [
-    "bin/"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lauset/vuetom-cli.git"
-  },
-  "keywords": [
-    "vitepress",
-    "theme",
-    "vue",
-    "cli"
-  ],
   "author": "lauset",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lauset/vuetom-cli/issues"
-  },
-  "homepage": "https://github.com/lauset/vuetom-cli",
   "dependencies": {
-    "chalk": "^2.4.2",
-    "commander": "^2.20.0",
-    "download-git-repo": "^1.1.0",
-    "inquirer": "^6.5.2",
-    "ora": "^3.4.0",
-    "request": "^2.88.2",
-    "rimraf": "^3.0.2"
+    "@vueuse/core": "6.7.4",
+    "axios": "0.24.0",
+    "clipboard-copy": "4.0.1",
+    "dayjs": "^1.10.7",
+    "element-plus": "^1.2.0-beta.3",
+    "marked": "3.0.8",
+    "normalize.css": "8.0.1",
+    "nprogress": "0.2.0",
+    "vitepress-theme-vuetom": "^1.0.1"
   },
   "devDependencies": {
-    "@types/events": "^3.0.0",
-    "@types/glob": "^7.2.0",
-    "@types/json-schema": "^7.0.9",
-    "@types/minimatch": "^3.0.5",
-    "@types/node": "^16.11.19",
-    "@types/unist": "^2.0.6",
-    "@types/vfile": "^3.0.2",
-    "@types/vfile-message": "^1.0.1",
-    "@typescript-eslint/parser": "^2.5.0",
-    "eslint": "^6.8.0",
-    "eslint-plugin-typescript": "^0.14.0",
-    "typescript": "^4.5.4"
+    "@crowdin/cli": "^3.7.4",
+    "@types/markdown-it": "12.2.3",
+    "@typescript-eslint/eslint-plugin": "5.2.0",
+    "@typescript-eslint/parser": "5.2.0",
+    "chalk": "4.1.2",
+    "cross-env": "7.0.3",
+    "escape-html": "1.0.3",
+    "eslint-define-config": "1.1.2",
+    "eslint-plugin-vue": "8.0.3",
+    "lodash": "^4.17.19",
+    "markdown-it": "12.2.0",
+    "markdown-it-container": "3.0.0",
+    "prettier": "2.4.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.45.2",
+    "sucrase": "3.20.3",
+    "vitepress": "^0.18.1"
   }
 }
