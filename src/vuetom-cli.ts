@@ -10,6 +10,18 @@ program
   .command('init', 'generate a new project from a template')
   .command('list', 'list available official templates')
 
+// program
+//   .command('list', 'list desc')
+//   .action(function () {
+//     list()
+//   })
+
+// program
+//   .command('init', 'init desc')
+//   .action(function () {
+//     init()
+//   })
+
 /**
  * Help
  */
@@ -31,3 +43,5 @@ program.on('--help', () => {
 // help()
 
 program.parse(process.argv)
+
+export {}

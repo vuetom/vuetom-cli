@@ -126,4 +126,4 @@ function handlePackage (projectInfo: ProjectInfo) {
   })
 }
 
-export {}
+export { init }

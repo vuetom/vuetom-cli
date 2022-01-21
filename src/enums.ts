@@ -15,5 +15,5 @@ enum DownloadState {
   fail = 4
 }
 
-exports.Choices
-exports.DownloadS
+exports.ProjectInfo
+exports.DownloadState
