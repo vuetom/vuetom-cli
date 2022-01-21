@@ -8,6 +8,9 @@
 
 > Blog & Documents generation tool
 
+[CHANGELOG](./CHANGELOG.md)
+
+
 ## Links
 
 [npm](https://www.npmjs.com/package/vuetom-cli)
@@ -58,4 +61,10 @@ npm run cli
 
 # Initialize theme project
 npm run cli:init
+
+# check dependencies updates
+ncu
+
+# update all dependencies
+ncu -u
 ```
