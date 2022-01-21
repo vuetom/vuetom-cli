@@ -36,10 +36,6 @@
           "lang": "zh-CN"
         }
       ]
-    },
-    {
-      "text": "GITHUB",
-      "link": "https://github.com/lauset/vitepress-theme-vuetom"
     }
   ],
   "en-US": [
@@ -74,10 +70,6 @@
           "lang": "zh-CN"
         }
       ]
-    },
-    {
-      "text": "GITHUB",
-      "link": "https://github.com/lauset/vitepress-theme-vuetom"
     }
   ]
 }
