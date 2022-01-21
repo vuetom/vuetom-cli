@@ -1,7 +1,8 @@
 {
   "name": "vuetom-doc",
-  "version": "0.0.2",
-  "description": "desc",
+  "version": "0.0.3",
+  "description": "Vuetom theme document style template",
+  "repository": "https://github.com/lauset/vuetom-cli",
   "scripts": {
     "dev": "vitepress dev .",
     "build": "vitepress build .",
@@ -17,8 +18,7 @@
     "element-plus": "^1.2.0-beta.3",
     "marked": "3.0.8",
     "normalize.css": "8.0.1",
-    "nprogress": "0.2.0",
-    "vitepress-theme-vuetom": "^1.0.1"
+    "nprogress": "0.2.0"
   },
   "devDependencies": {
     "@crowdin/cli": "^3.7.4",
@@ -37,6 +37,7 @@
     "rimraf": "^3.0.2",
     "sass": "^1.45.2",
     "sucrase": "3.20.3",
-    "vitepress": "^0.18.1"
+    "vitepress": "^0.21.6",
+    "vitepress-theme-vuetom": "^1.0.2"
   }
 }
