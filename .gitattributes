@@ -1,0 +1,4 @@
+*.js linguist-language=ts
+*.ts linguist-language=ts
+*.css linguist-detectable=false
+*.scss linguist-detectable=false
