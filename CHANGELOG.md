@@ -1,5 +1,17 @@
 ## Changelog
 
+### 0.1.7 (2022-05-21)
+
+#### Bug fixes
+
+- docs path
+
+### 0.1.5 (2022-05-20)
+
+#### Features
+
+- New git commands
+
 ### 0.1.3 (2022-01-21)
 
 #### Bug fixes

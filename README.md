@@ -10,7 +10,6 @@
 
 [CHANGELOG](./CHANGELOG.md)
 
-
 ## Links
 
 [npm](https://www.npmjs.com/package/vuetom-cli)
@@ -23,14 +22,25 @@
 
 ```bash
 npm install vuetom-cli -g
+
+# options
+vuetom-cli -V
 vuetom-cli --help
+
+# init command
+vuetom-cli init
+
+# list command
+vuetom-cli list temp-docs
+
+# git command
+vuetom-cli git lauset
 ```
 
 **yarn**
 
 ```bash
 yarn global add vuetom-cli
-vuetom-cli --help
 ```
 
 ## Usage
@@ -45,10 +55,11 @@ vuetom-cli --help
 
 `init`: Initialize a project with a vuetom theme
 
-`list`: Show remote warehouse template address
+`list`: Show the latest information about the vuetom cli branch
+
+`git`: Show the list of GIT warehouses of a user
 
 `help`: Same as -h option
-
 
 ## development
 
@@ -68,3 +79,22 @@ ncu
 # update all dependencies
 ncu -u
 ```
+## showtime
+
+`% vuetom-cli`
+
+![vc01](./media/vc01.png)
+
+`% vuetom-cli list`
+
+![vc02](./media/vc02.png)
+
+`% vuetom-cli git vuejs`
+
+![vc03](./media/vc03.png)
+
+`% vuetom-cli init`
+
+![vc04](./media/vc04.png)
+
+![vc05](./media/vc05.png)
