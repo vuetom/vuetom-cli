@@ -6,15 +6,17 @@ const ora = require('ora')
 const fs = require('fs')
 const handleInit = require('./inquirer.js')
 const spinner = ora()
+const createDocs = require('./utils').createDocs
 
-/**
- * Exit
- */
-process.on('exit', () => {
-  console.log('')
-  // console.log(chalk.hex('#FFC0CB')('  Command \'init\' execution completed'))
-  console.log()
-})
+interface ProjectInfo {
+  title: string,
+  author: string,
+  description: string,
+  style: string,
+  origin: string,
+  isNewDir?: string,
+  newDir?: string
+}
 
 let branchStep = 1
 let currentStep = 1
@@ -30,7 +32,7 @@ function init () {
   }
   handleInit(isString, projectDir)
     .then((projectInfo: ProjectInfo) => {
-      const { style, newDir } = projectInfo
+      const { style, newDir, origin } = projectInfo
       program.init = newDir
       switch (style) {
         case 'blog':
@@ -42,21 +44,40 @@ function init () {
           branchName = 'temp-docs'
           break
       }
-      spinner.start(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template`))
-      download(
-        `lauset/vuetom-cli#${branchName}`,
-        program.init,
-        function (err: Object) {
-          if (!err) {
-            spinner.succeed(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template`))
-            currentStep++
-            handleDownload(projectInfo)
-          } else {
-            spinner.fail(chalk.redBright(`[${currentStep}/${branchStep}] Downloading template`))
-            console.info(err)
-            spinner.stop()
-          }
-        })
+      switch (origin) {
+        case 'local':
+          spinner.start(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Generate template ${branchName}`))
+          createDocs(`${__dirname}/../${branchName}`, program.init, function (err: Object) {
+            if (!err) {
+              spinner.succeed(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template`))
+              currentStep++
+              handleDownload(projectInfo)
+            } else {
+              spinner.fail(chalk.redBright(`[${currentStep}/${branchStep}] Downloading template`))
+              console.info(err)
+              spinner.stop()
+            }
+          })
+          break
+        case 'github':
+          console.log(chalk.hex('#FF6347')(`Deprecated!!! Please use local mode next time.`))
+          spinner.start(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template from ${origin}`))
+          download(
+            `lauset/vuetom-cli#${branchName}`,
+            program.init,
+            function (err: Object) {
+              if (!err) {
+                spinner.succeed(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template`))
+                currentStep++
+                handleDownload(projectInfo)
+              } else {
+                spinner.fail(chalk.redBright(`[${currentStep}/${branchStep}] Downloading template`))
+                console.info(err)
+                spinner.stop()
+              }
+            })
+          break
+      }
     })
     .catch((err: Object) => {
       console.info(chalk.redBright(err))
@@ -92,7 +113,10 @@ function handleSuccess () {
     console.log()
   }
   console.log(chalk.gray('  # Installation package'))
-  console.log('  $ yarn or npm install')
+  console.log('  $ npm install')
+  console.log()
+  console.log(chalk.gray('  # Run'))
+  console.log('  $ npm run dev')
   console.log()
 }
 

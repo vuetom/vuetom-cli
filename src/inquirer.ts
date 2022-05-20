@@ -37,6 +37,15 @@ let questions = [
     filter: function (val: any) {
       return val.toLowerCase()
     }
+  },
+  {
+    name: 'origin',
+    type: 'list',
+    message: `Which image to pull items from?`,
+    choices: ['local ★★★', 'github'],
+    filter: function (val: string) {
+      return val.substring(0, 6).trim()
+    }
   }
 ]
 
