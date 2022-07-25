@@ -1,24 +1,28 @@
 ---
-home: true
-heroImage: /logo/vuetom-logo-m.png
-heroAlt: VUETOM
-heroText: Vuetom
-tagline: vitepress flat theme
-actionText: 快 速 开 始
-actionLink: /zh-CN/guide/info
-altActionText: 仓 库
-altActionLink: /zh-CN/guide/info
+layout: home
+
+title: Vuetom
+titleTemplate: Vite & Vue Powered Static Site Generator
+
+hero:
+  name: Vuetom
+  text: 
+  tagline: vitepress flat theme 
+  actions:
+    - theme: brand big
+      text: 快 速 开 始
+      link: /zh-CN/guide/info
+    - theme: alt big
+      text: 配 置
+      link: /zh-CN/guide/config
+
 features:
-  - 
-    title: '📦 优化的构建'
+  - title: 📦 优化的构建
     details: 可选 “多页应用” 或 “库” 模式的预配置 Rollup 构建
-  - 
-    title: '🔩 通用的插件'
+  - title: 🔩 通用的插件
     details: 在开发和构建之间共享 Rollup-superset 插件接口。
-  - 
-    title: '🔑 完全类型化的API'
+  - title: 🔑 完全类型化的API
     details: 灵活的 API 和完整 TypeScript 类型。
-footer: MIT Licensed
 ---
 
 <div class="frontpage sponsors">
@@ -40,6 +44,7 @@ footer: MIT Licensed
 
 <script setup>
 import { onMounted } from 'vue'
+import pk from 'vitepress-theme-vuetom/package.json'
 
 const sponsors = [
   {
@@ -71,21 +76,30 @@ const sponsors = [
 
 function fetchReleaseTag() {
   onMounted(() => {
-    fetch('https://api.github.com/repos/vitejs/docs-cn/releases/latest')
-      .then((res) => res.json())
-      .then((json) => {
-        const mainTitle = document.getElementById('main-title')
-        mainTitle.style.position = 'relative'
+    const mainTitle = document.getElementsByClassName('name')[0]
+    mainTitle.style.position = 'relative'
+    const docsReleaseTag = document.createElement('span')
+    docsReleaseTag.classList.add('release-tag')
+    const releaseTagName = `v${pk.version}`
+    docsReleaseTag.innerText = releaseTagName
+    if (releaseTagName !== undefined) {
+      mainTitle.appendChild(docsReleaseTag)
+    } 
+    // fetch('https://api.github.com/repos/vitejs/docs-cn/releases/latest')
+    //   .then((res) => res.json())
+    //   .then((json) => {
+    //     const mainTitle = document.getElementById('main-title')
+    //     mainTitle.style.position = 'relative'
 
-        const docsReleaseTag = document.createElement('span')
-        docsReleaseTag.classList.add('release-tag')
-        const releaseTagName = json.tag_name
-        docsReleaseTag.innerText = releaseTagName
+    //     const docsReleaseTag = document.createElement('span')
+    //     docsReleaseTag.classList.add('release-tag')
+    //     const releaseTagName = json.tag_name
+    //     docsReleaseTag.innerText = releaseTagName
 
-        if (releaseTagName !== undefined) {
-          mainTitle.appendChild(docsReleaseTag)
-        }
-      })
+    //     if (releaseTagName !== undefined) {
+    //       mainTitle.appendChild(docsReleaseTag)
+    //     }
+    //   })
   })
 }
 

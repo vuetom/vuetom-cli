@@ -1,9 +1,16 @@
----
+--- 
 title: 效果示例
+head:
+  - - meta
+    - name: description
+      content: 来看看 MD 会变成什么样子
+  - - meta
+    - name: keywords
+      content: markdown example
 ---
 
-# {{ $frontmatter.title }}
 
+# Markdown 效果示例
 
 -------------------- 手动分割线 --------------------
 
@@ -16,7 +23,12 @@ title: 效果示例
 ###### This is an h6 tag
 
 
-*这是斜体* _这是斜体_ **这是黑体** __这是黑体__ ***斜体里加***黑体****** ***黑体里加***斜体******
+*这是斜体*
+_这是斜体_
+**这是黑体**
+__这是黑体__
+*斜体里加**黑体***
+**黑体里加*斜体***
 
 
 * Item 1
@@ -35,20 +47,23 @@ title: 效果示例
 ![Yaktocat的图片](/logo/vuetom-logo.png)
 
 
-http://github.com - automatic! [GitHub](http://github.com)
+http://github.com - automatic!
+[GitHub](http://github.com)
 
 
 As Kanye West said:
-> We're living the future so the present is our past.
+> We're living the future so
+> the present is our past.
 
 
-I think you should use an `<addr>` element here instead.
+I think you should use an
+`<addr>` element here instead.
 
 
-| First Header                | Second Header                |
-| --------------------------- | ---------------------------- |
-| Content from cell 1         | Content from cell 2          |
-| Content in the first column | Content in the second column |
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
 
 
 ~~this~~

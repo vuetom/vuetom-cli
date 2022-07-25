@@ -1,43 +1,37 @@
 {
-  "name": "vuetom-doc",
-  "version": "0.0.3",
+  "name": "temp-docs",
+  "version": "2.0.0",
   "description": "Vuetom theme document style template",
   "repository": "https://github.com/lauset/vuetom-cli",
+  "author": "lauset",
   "scripts": {
     "dev": "vitepress dev .",
-    "build": "vitepress build .",
+    "build": "npm run clean && vitepress build .",
     "serve": "vitepress serve .",
     "clean": "rimraf .vitepress/dist"
   },
-  "author": "lauset",
   "dependencies": {
-    "@vueuse/core": "6.7.4",
-    "axios": "0.24.0",
+    "@vueuse/core": "^8.9.1",
+    "axios": "0.27.2",
+    "chalk": "^4.1.2",
     "clipboard-copy": "4.0.1",
-    "dayjs": "^1.10.7",
-    "element-plus": "^1.2.0-beta.3",
-    "marked": "3.0.8",
+    "element-plus": "^2.2.9",
+    "marked": "^4.0.17",
     "normalize.css": "8.0.1",
-    "nprogress": "0.2.0"
+    "nprogress": "0.2.0",
+    "prismjs": "^1.28.0",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@crowdin/cli": "^3.7.4",
     "@types/markdown-it": "12.2.3",
-    "@typescript-eslint/eslint-plugin": "5.2.0",
-    "@typescript-eslint/parser": "5.2.0",
-    "chalk": "4.1.2",
-    "cross-env": "7.0.3",
     "escape-html": "1.0.3",
-    "eslint-define-config": "1.1.2",
-    "eslint-plugin-vue": "8.0.3",
-    "lodash": "^4.17.19",
-    "markdown-it": "12.2.0",
+    "lodash": "^4.17.21",
+    "markdown-it": "13.0.1",
     "markdown-it-container": "3.0.0",
-    "prettier": "2.4.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.45.2",
-    "sucrase": "3.20.3",
-    "vitepress": "^0.21.6",
-    "vitepress-theme-vuetom": "^1.0.2"
+    "sass": "^1.54.0",
+    "typescript": "^4.7.4",
+    "vitepress": "^1.0.0-alpha.4",
+    "vitepress-theme-vuetom": "^2.0.1"
   }
 }

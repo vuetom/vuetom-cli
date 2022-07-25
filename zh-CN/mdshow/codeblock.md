@@ -1,31 +1,38 @@
 ---
-title: Code Block
+title: 代码块展示
+head:
+  - - meta
+    - name: description
+      content: 代码块展示
+  - - meta
+    - name: keywords
+      content: code
 ---
 
 # {{ $frontmatter.title }}
 
-## Show
 
-Wrap the code with three ` symbols
+## MD语法展示
+
+使用三个 ` 符号将代码包裹其中
 
 <br/>
 
-**Light Theme**
+**亮色主题**
 
-Can be in language_ Add after key  `light`
+可以在 language_key(语言标识) 后加入  `light` 
 
-Input：
+输入内容：
 
 <div>
 ```java light
 </div>
-String language = "Java"; 
-
+String language = "Java";
 <div>
-  ```
+```
 </div>
 
-Output：
+输出内容：
 
 ```java light
 String language = "Java";
@@ -33,22 +40,21 @@ String language = "Java";
 
 <br/>
 
-**Dark Theme**
+**暗色主题**
 
-The default is dark
+默认的话就是暗色系
 
-Input：
+输入内容：
 
 <div>
 ```js
 </div>
-String language = "JS"; 
-
+String language = "JS";
 <div>
-  ```
+```
 </div>
 
-Output：
+输出内容：
 
 ```java
 String language = "JS";
@@ -56,13 +62,13 @@ String language = "JS";
 
 <br/>
 
-**Effect**
-
+**示例展示**
+  
 - javascript ( js )
 
 ```js 
 function fun(){
-    echo "Hello, World!";
+	echo "Hello, World!";
 }
 fun();
 ```
