@@ -1,0 +1,53 @@
+{
+  "name": "vuetom-cli",
+  "version": "0.2.3",
+  "description": "A simple CLI for vitepress-theme-vuetom",
+  "scripts": {
+    "cli": "node ./bin/vuetom-cli.js",
+    "cli:init": "node ./bin/vuetom-cli.js init",
+    "cli:list": "node ./bin/vuetom-cli.js list",
+    "ts": "ts-node ./src/vuetom-cli.ts",
+    "ts:init": "ts-node ./src/vuetom-cli-init.ts",
+    "ts:list": "ts-node ./src/vuetom-cli-list.ts",
+    "copy": "node ../../scripts/index",
+    "tsc": "pnpm copy && pnpm clean && tsc",
+    "clean": "rimraf bin",
+    "eslint": "eslint src --ext .ts",
+    "pub": "npm publish"
+  },
+  "bin": {
+    "vuetom-cli": "./bin/vuetom-cli.js"
+  },
+  "files": [
+    "bin/",
+    "temp-blog",
+    "temp-docs",
+    ".env"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauset/vuetom-cli.git"
+  },
+  "keywords": [
+    "vitepress",
+    "templates",
+    "cli"
+  ],
+  "author": "lauset",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lauset/vuetom-cli/issues"
+  },
+  "homepage": "https://github.com/lauset/vuetom-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.0",
+    "dotenv": "^16.0.1",
+    "download-git-repo": "^3.0.2",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+  }
+}

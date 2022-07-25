@@ -1,0 +1,12 @@
+{
+  "name": "temp-blog",
+  "version": "2.0.0",
+  "description": "blog templates",
+  "scripts": {
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "lauset",
+  "license": "MIT"
+}
