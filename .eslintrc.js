@@ -3,23 +3,23 @@ module.exports = {
   plugins: [
     'typescript'
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "es6": true
+  'env': {
+    'browser': true,
+    'node': true,
+    'es6': true
   },
-  "extends": [
-    "eslint:recommended",
+  'extends': [
+    'eslint:recommended'
   ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+  'globals': {
+    'Atomics': 'readonly',
+    'SharedArrayBuffer': 'readonly'
   },
-  "parserOptions": {
-    "parser": "babel-eslint",
-    "ecmaVersion": 2018,
-    "sourceType": "module",
-    "allowImportExportEverywhere": true
+  'parserOptions': {
+    'parser': 'babel-eslint',
+    'ecmaVersion': 2018,
+    'sourceType': 'module',
+    'allowImportExportEverywhere': true
   },
   rules: {
     'accessor-pairs': 2,
@@ -50,8 +50,8 @@ module.exports = {
       'after': true
     }],
     'handle-callback-err': [2, '^(err|error)$'],
-    'indent': ["error", 2, {
-      "SwitchCase": 1
+    'indent': ['error', 2, {
+      'SwitchCase': 1
     }],
     'jsx-quotes': [2, 'prefer-single'],
     'key-spacing': [2, {
@@ -192,4 +192,4 @@ module.exports = {
     }],
     'array-bracket-spacing': [2, 'never']
   }
-};
+}
