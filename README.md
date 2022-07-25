@@ -8,6 +8,8 @@
 
 > Blog & Documents generation tool
 
+Version: 0.2.x
+
 [CHANGELOG](./CHANGELOG.md)
 
 ## Links
@@ -23,18 +25,11 @@
 ```bash
 npm install vuetom-cli -g
 
-# options
-vuetom-cli -V
+# options: show version
+vuetom-cli -v
+
+# options: show help information
 vuetom-cli --help
-
-# init command
-vuetom-cli init
-
-# list command
-vuetom-cli list temp-docs
-
-# git command
-vuetom-cli git lauset
 ```
 
 **yarn**
@@ -47,9 +42,9 @@ yarn global add vuetom-cli
 
 **Options**
 
-`-V`: View the current plug-in version number
+`-v, --vers`: View the current version number
 
-`-h`: View the current plug-in help
+`-h, --help`: View the current help
 
 **Commands**
 
@@ -59,19 +54,47 @@ yarn global add vuetom-cli
 
 `git`: Show the list of GIT warehouses of a user
 
+`ver`: Show theme or templates local version number
+
 `help`: Same as -h option
+
+**eg.**
+
+```bash
+# Create docs templates
+vuetom-cli init
+
+# See the latest submission
+vuetom-cli list
+vuetom-cli list temp-docs
+
+# Show someone's repo
+vuetom-cli git lauset
+vuetom-cli git lauset gitee
+
+# Show local template version
+vuetom-cli ver
+vuetom-cli ver -t docs
+```
 
 ## development
 
 ```bash
+# install 
+pnpm install
+
 # Compiling TS files
-npm run tsc
+pnpm build
 
-# Test Cli
-npm run cli
+# Test Cli (dev)
+pnpm ts
+pnpm ts:init
+pnpm ts:list
 
-# Initialize theme project
-npm run cli:init
+# Test Cli (prod)
+pnpm cli
+pnpm cli:init
+pnpm cli:list
 
 # check dependencies updates
 ncu

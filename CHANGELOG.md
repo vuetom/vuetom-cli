@@ -1,5 +1,23 @@
 ## Changelog
 
+### 0.2.5 (...)
+
+#### Features
+
+- add update tips
+- change the version display to remote version 
+
+### 0.2.0 - 0.2.3 (2022-07-25)
+
+#### Features
+
+- new command 'ver'
+- pnpm refactor
+
+#### Bug fixes
+
+- all command
+
 ### 0.1.7 (2022-05-21)
 
 #### Bug fixes
