@@ -1,9 +1,9 @@
-# vuetom-cli
+# Vuetom CLI
 
 <h1 align="center">
-	<br>
-	<img width="320" src="media/vuetom-logo-m.png" alt="vuetom-cli">
-	<br>
+ <br>
+ <img width="320" src="media/vuetom-logo-m.png" alt="vuetom-cli">
+ <br>
 </h1>
 
 > Blog & Documents generation tool
@@ -58,6 +58,8 @@ yarn global add vuetom-cli
 
 `help`: Same as -h option
 
+`-l`: Change language
+
 **eg.**
 
 ```bash
@@ -75,6 +77,10 @@ vuetom-cli git lauset gitee
 # Show local template version
 vuetom-cli ver
 vuetom-cli ver -t docs
+
+# Change language to zh 
+vuetom-cli -l zh
+vuetom-cli -l en # english
 ```
 
 ## development
@@ -102,22 +108,25 @@ ncu
 # update all dependencies
 ncu -u
 ```
-## showtime
+
+## ShowTime
 
 `% vuetom-cli`
 
-![vc01](./media/vc01.png)
-
-`% vuetom-cli list`
-
-![vc02](./media/vc02.png)
-
-`% vuetom-cli git vuejs`
-
-![vc03](./media/vc03.png)
+![vc01](./media/vt01.png)
 
 `% vuetom-cli init`
 
-![vc04](./media/vc04.png)
+![vc02](./media/vt02.png)
 
-![vc05](./media/vc05.png)
+`% vuetom-cli list`
+
+![vc03](./media/vt03.png)
+
+`% vuetom-cli git`
+
+![vc04](./media/vt04.png)
+
+`$ vuetom-cli ver`
+
+![vc05](./media/vt05.png)

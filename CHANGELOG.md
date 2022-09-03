@@ -1,11 +1,12 @@
 ## Changelog
 
-### 0.2.5 (...)
+### 0.2.5 (2022-09-03)
 
 #### Features
 
 - add update tips
-- change the version display to remote version 
+- change the version display to remote version
+- add language chagne
 
 ### 0.2.0 - 0.2.3 (2022-07-25)
 
