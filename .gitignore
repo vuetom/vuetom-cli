@@ -1,6 +1,9 @@
 node_modules/
 bin/
+packages/cli/media/
 packages/cli/temp-blog/
 packages/cli/temp-docs/
+packages/cli/CHANGELOG.md
+packages/cli/README.md
 package-lock.json
 yarn.lock
