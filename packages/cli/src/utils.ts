@@ -34,7 +34,22 @@ function copyDir (src: string, dist: string) {
   _copy(src, dist)
 }
 
+function deepFind (obj: any, path: string) {
+  const paths = path.split('.')
+  let current = obj
+  let i
+  for (i = 0; i < paths.length; ++i) {
+    if (current[paths[i]] == undefined) {
+      return undefined
+    } else {
+      current = current[paths[i]]
+    }
+  }
+  return current
+}
+
 module.exports = {
+  deepFind,
   isLocalPath (templatePath: string) {
     return /^[./]|(^[a-zA-Z]:)/.test(templatePath)
   },

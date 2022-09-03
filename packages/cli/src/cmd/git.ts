@@ -1,7 +1,8 @@
-const logger = require('./logger')
+const logger = require('../logger')
 const request = require('request')
 const chalk = require('chalk')
-const spinner = require('./spinner')
+const spinner = require('../spinner')
+const t = require('../lang').t
 
 const GITEE_URL = 'https://gitee.com/api/v5/users'
 const GITHUB_URL = 'https://api.github.com/users'
@@ -53,7 +54,7 @@ function handleGit (user: string, type: string) {
     giteeList(user ?? 'lauset', type)
   } else {
     logger.error(
-      `"${type}" is not allowed! Type must be "github" or "gitee" \n`
+      `"${type}" ${t('error.gitType')} \n`
     )
   }
 }

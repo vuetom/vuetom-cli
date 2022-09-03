@@ -24,9 +24,31 @@ program
     chalk.gray('list available official templates by branch')
   )
 
+/**
+ * command help
+ *
+ * eg.
+ * --help
+ * help git
+ */
 program
   .helpOption('-h, --help', chalk.gray('display help for you'))
   .addHelpCommand(true, chalk.gray('display help for command'))
+  .on('--help', () => require('./cmd/help').default())
+
+/**
+ * option lang
+ *
+ * eg.
+ * -l zh
+ * --lang zhTW
+ */
+program
+  .option('-l, --lang [language]', chalk.gray('change language'))
+  .action((options) => {
+    const { lang } = options
+    require('./cmd/lang').default(lang)
+  })
 
 /**
  * command git
@@ -41,7 +63,7 @@ program
   .argument('<user>', "your github/gitee 's username")
   .argument('[type]', 'repo type: "github" or "gitee"', undefined)
   .action((user, type) => {
-    require('./cmd-git').default(user, type)
+    require('./cmd/git').default(user, type)
   })
 
 /**
@@ -50,34 +72,17 @@ program
  * eg.
  * ver
  * ver -t blog
- * ver -l
+ * ver -a
  */
 program
   .command('ver')
   .description(chalk.gray('show the theme/templates versions'))
   .option('-t, --temp <temp>', 'template version', 'ALL')
-  .option('-l, --list', 'show more info', false)
+  .option('-a, --all', 'show all info', false)
   .action((options, command) => {
     const { temp, list } = options
-    require('./cmd-ver').default(temp, list)
+    require('./cmd/ver').default(temp, list)
   })
-
-program.on('--help', () => {
-  console.log()
-  console.log(chalk.hex('#66CDAA')('  Examples:'))
-  console.log()
-  console.log(
-    chalk.gray('    # create a new project with an official template')
-  )
-  console.log('    $ vuetom-cli init project-name')
-  console.log()
-  console.log(chalk.gray('    # show github branch information'))
-  console.log('    $ vuetom-cli list temp-docs')
-  console.log()
-  console.log(chalk.gray('    # show github repository'))
-  console.log('    $ vuetom-cli git vuejs')
-  console.log()
-})
 
 program.showHelpAfterError()
 

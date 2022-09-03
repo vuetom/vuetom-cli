@@ -1,38 +1,39 @@
 const inquirer = require('inquirer')
+const t = require('./lang').t
 
 const isNewDirQuestions = {
   name: 'isNewDir',
   type: 'confirm',
-  message: `Whether to create a new directory?`,
+  message: t('init.createDir'),
   default: 'Y'
 }
 
 const newDirQuestion = {
   name: 'newDir',
   type: 'input',
-  message: `What's the name of new directory?`
+  message: t('init.dirName')
 }
 
 let questions = [
   {
     name: 'title',
     type: 'input',
-    message: `What's the title of your project?`
+    message: t('init.title')
   },
   {
     name: 'description',
     type: 'input',
-    message: `What's the description of your project?`
+    message: t('init.desc')
   },
   {
     name: 'author',
     type: 'input',
-    message: `What's the author's name?`
+    message: t('init.author')
   },
   {
     name: 'style',
     type: 'list',
-    message: `Which template do you want to create?`,
+    message: t('init.tempSelect'),
     choices: ['blog', 'docs'],
     filter: function (val: any) {
       return val.toLowerCase()
@@ -41,7 +42,7 @@ let questions = [
   {
     name: 'origin',
     type: 'list',
-    message: `Which image to pull items from?`,
+    message: t('init.imageSelect'),
     choices: ['local  (fast)', 'github (newest)★'],
     filter: function (val: string) {
       return val.substring(0, 6).trim()

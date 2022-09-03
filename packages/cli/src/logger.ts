@@ -1,11 +1,12 @@
 const chalk = require('chalk')
 const format = require('util').format
+const t = require('./lang').t
 
 /**
  * Prefix
  */
-const ERROR_PRE = 'Error'
-const SUCCESS_PRE = 'Success'
+const ERROR_PRE = t('info.error')
+const SUCCESS_PRE = t('info.success')
 const sep = chalk.gray('·')
 
 /**

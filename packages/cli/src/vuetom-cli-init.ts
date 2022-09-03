@@ -7,6 +7,7 @@ const fs = require('fs')
 const handleInit = require('./inquirer')
 const spinner = ora()
 const createDocs = require('./utils').createDocs
+const t = require('./lang').t
 
 interface ProjectInfo {
   title: string,
@@ -61,7 +62,7 @@ function init () {
           break
         case 'github':
           console.log()
-          console.log(chalk.yellow(`If there is no response for a long time, Try to use local mode again.`))
+          console.log(chalk.yellow(t('init.timeout')))
           console.log()
           spinner.start(chalk.hex('#00FFFF')(`[${currentStep}/${branchStep}] Downloading template from ${origin}`))
           download(
@@ -106,19 +107,19 @@ function handleSuccess () {
   spinner.stop()
 
   console.log()
-  console.info(chalk.greenBright('Done, Now Run:'))
+  console.info(chalk.greenBright(t('info.downloadOk')))
   console.log()
 
   if (program.init !== './') {
-    console.log(chalk.gray('  # Switch to your blog file directory'))
+    console.log(chalk.gray(`  # ${t('info.switchDir')}`))
     console.log(`  $ cd ${program.init}`)
     console.log()
   }
-  console.log(chalk.gray('  # Installation package'))
-  console.log('  $ npm install')
+  console.log(chalk.gray(`  # ${t('info.installDeps')}`))
+  console.log('  $ pnpm install')
   console.log()
-  console.log(chalk.gray('  # Run'))
-  console.log('  $ npm run dev')
+  console.log(chalk.gray(`  # ${t('info.run')}`))
+  console.log('  $ pnpm dev')
   console.log()
 }
 
