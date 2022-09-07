@@ -10,6 +10,8 @@
 
 Version: 0.2.x
 
+English | [中文](./README.zh_CN.md)
+
 [CHANGELOG](./CHANGELOG.md)
 
 ## Links
@@ -63,6 +65,12 @@ yarn global add vuetom-cli
 **eg.**
 
 ```bash
+# Show Version
+vuetom-cli -v
+
+# Show HelpInformation
+vuetom-cli -h
+
 # Create docs templates
 vuetom-cli init
 
@@ -81,6 +89,7 @@ vuetom-cli ver -t docs
 # Change language to zh 
 vuetom-cli -l zh
 vuetom-cli -l en # english
+vuetom-cli -l    # show language
 ```
 
 ## development

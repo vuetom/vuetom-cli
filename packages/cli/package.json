@@ -1,6 +1,6 @@
 {
   "name": "vuetom-cli",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A simple CLI for vitepress-theme-vuetom",
   "scripts": {
     "cli": "node ./bin/vuetom-cli.js",

@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.2.6 (2022-09-06)
+
+- perfect zh-tw.json
+- `-l` can show all languages
+- cli with no options then show help
+
 ### 0.2.5 (2022-09-03)
 
 #### Features
