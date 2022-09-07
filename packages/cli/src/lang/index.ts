@@ -2,6 +2,7 @@
 const p = require('../path')
 const fs = require('fs')
 const dotenv = require('dotenv')
+const chalk = require('chalk')
 const { parse, stringify } = require('envfile')
 const envPath = p.cliRoot + '/.env'
 const { deepFind } = require('../utils')
@@ -32,12 +33,18 @@ function useLang () {
     envjson.VUETOM_CLI_LANG = lang
     fs.writeFileSync(envPath, stringify(envjson))
     const langText = t(`info.${envLang}`)
-    console.log(`${t('info.changeLang')} ${envLang}(${langText}) ✅ \n`)
+    console.log(`${t('info.changeLang')} ${envLang} (${langText}) ✅ \n`)
   }
 
   const showLang = () => {
-    const langText = t(`info.${envLang}`)
-    console.log(`${t('info.currentLang')}: ${envLang}(${langText}) \n`)
+    const langText = chalk.gray(`(${t(`info.${envLang}`)})`)
+    console.log(`${chalk.gray(t('info.currentLang'))} ${envLang} ${langText} \n`)
+    console.log(`${chalk.gray(t('info.activeLang'))}`)
+    langs.forEach(ll => {
+      const langText = t(`info.${ll}`)
+      console.log(`  ${ll}\t${chalk.gray(`=>  ${langText}`)}`)
+    })
+    console.log('')
   }
 
   return {

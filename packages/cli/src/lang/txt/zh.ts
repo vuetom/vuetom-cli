@@ -20,6 +20,7 @@ export default {
     success: '成功',
     currentLang: '当前语言',
     changeLang: '切换语言',
+    activeLang: '可用的语言有',
     en: '英文',
     zh: '中文',
     zhTW: '繁体中文',

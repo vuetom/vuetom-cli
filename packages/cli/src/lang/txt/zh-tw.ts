@@ -1,34 +1,35 @@
 export default {
   init: {
-    createDir: '是否新建一个目录来存放项目?',
-    dirName: '目录名称是什么?',
-    title: '项目名称是什么?',
-    desc: '项目描述是什么?',
-    author: '作者名字是什么?',
-    tempSelect: '你希望初始化为哪种模版呢?',
-    imageSelect: '你希望从哪里获取模版呢?',
-    local: '本地 (速度快)',
-    remote: '远程Github (版本新)',
-    timeout: '如长时间未响应，请稍后重试或者前往GIT仓库获取模版'
+    createDir: '是否新建一個目錄來存放項目？',
+    dirName: '目錄名稱是什麼？',
+    title: '項目名稱是什麼？',
+    desc: '項目描述是什麼？',
+    author: '作者名字是什麼？',
+    tempSelect: '你希望初始化為哪種模版呢？',
+    imageSelect: '你希望從哪裡獲取模版呢？',
+    local: '本地（速度快）',
+    remote: '遠程Github（版本新）',
+    timeout: '如長時間未響應,請稍後重試或者前往GIT倉庫獲取模版'
   },
   error: {
-    lang: '语言设置错误! 语言类型必须为',
-    gitType: '是不允许的哦, 必须为 "github" 或 "gitee"'
+    lang: '語言設定錯誤！ 語言類型必須為',
+    gitType: '是不允許的哦,必須為“github”或“gitee”'
   },
   info: {
-    error: '错误',
+    error: '錯誤',
     success: '成功',
-    currentLang: '当前语言',
-    changeLang: '切换语言',
+    currentLang: '當前語言',
+    changeLang: '切換語言',
+    activeLang: '可用的語言有',
     en: '英文',
     zh: '中文',
-    zhTW: '繁体中文',
-    downloadOk: '初始化完成, 请继续: ',
-    switchDir: '切换至您的目录',
-    installDeps: '安装依赖',
-    run: '启动',
-    versionCheck: '请确保模版 (temp-blog/temp-docs) 的版本要 >= vitepress-theme-vuetom 的版本',
-    versionShow: '版本信息',
-    versionWarn: '模版版本与主题版本不匹配, 客观最好等待模版更新哦'
+    zhTW: '繁體中文',
+    downloadOk: '初始化完成,請繼續：',
+    switchDir: '切換至您的目錄',
+    installDeps: '安裝依賴',
+    run: '啟動',
+    versionCheck: '請確保模版（temp-blog/temp-docs）的版本要>= vitepress-theme-vuetom的版本',
+    versionShow: '版本資訊',
+    versionWarn: '模版版本與主題版本不匹配,客觀最好等待模版更新哦'
   }
 }

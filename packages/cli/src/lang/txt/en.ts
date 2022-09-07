@@ -20,6 +20,7 @@ export default {
     success: 'Success',
     currentLang: 'Language',
     changeLang: 'Change Language',
+    activeLang: 'Available languages are',
     en: 'English',
     zh: 'Chinese',
     zhTW: 'Traditional Chinese',

@@ -1,15 +1,13 @@
 #!/usr/bin/env node
 
-// const program = require('commander')
+const { Command } = require('commander')
 const chalk = require('chalk')
 const pkg = require('../package')
-
-import { Command } from 'commander'
 const program = new Command()
 
 program
   .name(pkg.name)
-  .description(chalk.hex('#FA8072')(pkg.description))
+  .description(chalk.hex('#FCD34D')(pkg.description))
   .version(pkg.version, '-v, --vers', chalk.gray('output the current version'))
 
 program
@@ -45,7 +43,7 @@ program
  */
 program
   .option('-l, --lang [language]', chalk.gray('change language'))
-  .action((options) => {
+  .action((options: { lang: string }) => {
     const { lang } = options
     require('./cmd/lang').default(lang)
   })
@@ -62,7 +60,7 @@ program
   .description(chalk.gray('show the list of github/gitee repository of a user'))
   .argument('<user>', "your github/gitee 's username")
   .argument('[type]', 'repo type: "github" or "gitee"', undefined)
-  .action((user, type) => {
+  .action((user: string, type: string) => {
     require('./cmd/git').default(user, type)
   })
 
@@ -79,7 +77,7 @@ program
   .description(chalk.gray('show the theme/templates versions'))
   .option('-t, --temp <temp>', 'template version', 'ALL')
   .option('-a, --all', 'show all info', false)
-  .action((options, command) => {
+  .action((options: { temp: string; list: boolean }) => {
     const { temp, list } = options
     require('./cmd/ver').default(temp, list)
   })
@@ -90,8 +88,17 @@ program.exitOverride()
 
 try {
   program.parse(process.argv)
+  const args = program.args
+  const options = program.opts()
+  const optionArr = Object.keys(options)
+  if (optionArr.length === 0 && args.length == 0) {
+    program.error(chalk.hex('#F87171')('Welcome To Vuetom Cli'), {
+      exitCode: 2,
+      code: 'no.options'
+    })
+  }
 } catch (err) {
-  // exitCode: 1
+  // exitCode: 1 2
 }
 
 export {}
