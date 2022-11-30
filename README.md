@@ -54,7 +54,7 @@ yarn global add vuetom-cli
 
 `list`: Show the latest information about the vuetom cli branch
 
-`git`: Show the list of GIT warehouses of a user
+`git`: Show the link of user's GIT warehouse list
 
 `ver`: Show theme or templates local version number
 
@@ -90,6 +90,10 @@ vuetom-cli ver -t docs
 vuetom-cli -l zh
 vuetom-cli -l en # english
 vuetom-cli -l    # show language
+
+# Auto check update
+vuetom-cli -u # manual operation command
+vuetom-cli -u 0.2.7 # update to new version
 ```
 
 ## development
@@ -122,20 +126,30 @@ ncu -u
 
 `% vuetom-cli`
 
-![vc01](./media/vt01.png)
+<!-- ![vc01](./media/vt01.png) -->
+<img width="" src="media/vt01.png" alt="vt01"/>
 
 `% vuetom-cli init`
 
-![vc02](./media/vt02.png)
+<!-- ![vc02](./media/vt02.png) -->
+<img width="" src="media/vt02.png" alt="vt02"/>
 
 `% vuetom-cli list`
 
-![vc03](./media/vt03.png)
+<!-- ![vc03](./media/vt03.png) -->
+<img width="" src="media/vt03.png" alt="vt03"/>
 
 `% vuetom-cli git`
 
-![vc04](./media/vt04.png)
+<!-- ![vc04](./media/vt04.png) -->
+<img width="" src="media/vt04.png" alt="vt04"/>
 
 `$ vuetom-cli ver`
 
-![vc05](./media/vt05.png)
+<!-- ![vc05](./media/vt05.png) -->
+<img width="" src="media/vt05.png" alt="vt05"/>
+
+`$ vuetom-cli -u`
+
+<!-- ![vc06](./media/vt06.png) -->
+<img width="" src="media/vt06.png" alt="vt06"/>

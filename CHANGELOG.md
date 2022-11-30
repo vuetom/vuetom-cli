@@ -1,5 +1,11 @@
 ## Changelog
 
+### 0.2.7 (2022-11-30)
+
+- auto check update
+- `-u` to check update
+- request -> axios
+
 ### 0.2.6 (2022-09-06)
 
 - perfect zh-tw.json

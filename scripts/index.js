@@ -23,6 +23,7 @@ async function copyBlog () {
 async function copyOther () {
   const files = [
     'README.md',
+    'README.zh_CN.md',
     'CHANGELOG.md',
     'media'
   ]
