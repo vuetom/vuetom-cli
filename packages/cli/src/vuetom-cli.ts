@@ -40,12 +40,20 @@ program
  * eg.
  * -l zh
  * --lang zhTW
+ *
+ * -u
+ * -u 0.2.7
  */
 program
   .option('-l, --lang [language]', chalk.gray('change language'))
-  .action((options: { lang: string }) => {
-    const { lang } = options
-    require('./cmd/lang').default(lang)
+  .option('-u, --update [version]', chalk.gray('update version'))
+  .action((options: {
+    lang: string | boolean,
+    update: string | boolean
+  }) => {
+    const { lang, update } = options
+    if (lang) require('./cmd/lang').default(lang)
+    if (update) require('./cmd/update').default(update)
   })
 
 /**
@@ -91,6 +99,10 @@ try {
   const args = program.args
   const options = program.opts()
   const optionArr = Object.keys(options)
+  // auto check update
+  if (!args.includes('init') && !options?.update) {
+    require('./cmd/check').default()
+  }
   if (optionArr.length === 0 && args.length == 0) {
     program.error(chalk.hex('#F87171')('Welcome To Vuetom Cli'), {
       exitCode: 2,
@@ -99,6 +111,7 @@ try {
   }
 } catch (err) {
   // exitCode: 1 2
+  // console.error(err)
 }
 
 export {}

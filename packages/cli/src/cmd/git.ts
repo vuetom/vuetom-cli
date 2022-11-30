@@ -1,5 +1,5 @@
 const logger = require('../logger')
-const request = require('request')
+// const axios = require('axios')
 const chalk = require('chalk')
 const spinner = require('../spinner')
 const t = require('../lang').t
@@ -9,30 +9,42 @@ const GITHUB_URL = 'https://api.github.com/users'
 
 function req (url: string, type: string) {
   spinner.start()
-  request(
-    { url, headers: { 'User-Agent': '' }},
-    (err: any, res: any, body: any) => {
-      spinner.stop()
-      if (err) logger.fatal(err)
-      const requestBody = JSON.parse(body)
-      if (Array.isArray(requestBody)) {
-        logger.success(`${type} reop list: \n`)
-        requestBody.forEach((repo) => {
-          console.log(
-            '  ' +
-              chalk.hex('#FFC0CB')('★') +
-              '  ' +
-              chalk.hex('#00FFFF')(repo.name) +
-              ' - ' +
-              repo.description
-          )
-        })
-      } else {
-        logger.error(requestBody.message)
-      }
-      console.log()
-    }
-  )
+  setTimeout(() => {
+    console.log(' ')
+    console.log(
+      '  ' +
+      chalk.hex('#FFC0CB')('Go to ') +
+      chalk.hex('#00FFFF')(url) +
+      chalk.hex('#FFC0CB')(' to get data')
+    )
+    console.log(' ')
+    spinner.stop()
+  }, 1000)
+  // axios({
+  //   url,
+  //   method: 'get'
+  // })
+  //   .then(function (resp: any) {
+  //     if (resp.status === 200) {
+  //       const data = JSON.parse(resp.data)
+  //       if (Array.isArray(data)) {
+  //         logger.success(`${type} reop list: \n`)
+  //         data.forEach((repo) => {
+  //           console.log(
+  //             '  ' +
+  //           chalk.hex('#FFC0CB')('★') +
+  //           '  ' +
+  //           chalk.hex('#00FFFF')(repo.name) +
+  //           ' - ' +
+  //           repo.description
+  //           )
+  //         })
+  //       } else {
+  //         logger.error(data.message)
+  //       }
+  //     }
+  //     console.log()
+  //   })
 }
 
 function githubList (user: string, type: string) {
