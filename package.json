@@ -11,24 +11,20 @@
     "cli:list": "pnpm run -C packages/cli cli:list",
     "ts": "pnpm run -C packages/cli ts",
     "ts:init": "pnpm run -C packages/cli ts:init",
-    "ts:list": "pnpm run -C packages/cli ts:list" 
-  },
-  "dependencies": {
+    "ts:list": "pnpm run -C packages/cli ts:list"
   },
   "devDependencies": {
-    "@types/events": "^3.0.0",
     "@types/glob": "^8.0.0",
     "@types/inquirer": "^9.0.1",
     "@types/json-schema": "^7.0.11",
     "@types/minimatch": "^5.1.2",
     "@types/node": "^18.7.14",
-    "@types/request": "^2.48.8",
     "@types/unist": "^2.0.6",
     "@types/vfile": "^3.0.2",
     "@types/vfile-message": "^1.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.36.1",
     "eslint": "^8.23.0",
-    "eslint-plugin-typescript": "^0.14.0",
     "fs-extra": "^10.1.0",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.1",

@@ -5,5 +5,6 @@ packages/cli/temp-blog/
 packages/cli/temp-docs/
 packages/cli/CHANGELOG.md
 packages/cli/README.md
+packages/cli/README.zh_CN.md
 package-lock.json
 yarn.lock
