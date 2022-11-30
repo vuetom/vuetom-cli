@@ -31,5 +31,15 @@ export default {
     versionCheck: '请确保模版 (temp-blog/temp-docs) 的版本要 >= vitepress-theme-vuetom 的版本',
     versionShow: '版本信息',
     versionWarn: '模版版本与主题版本不匹配, 客官最好等待模版更新哦'
+  },
+  update: {
+    updateCheck: '检查更新中...',
+    updateOk: '更新完成!',
+    updateTo: '正在更新至',
+    updateNoBack: '不能回退版本',
+    updateCan: '可以更新版本啦！',
+    run: '运行',
+    toUpdate: '来更新',
+    noUpdate: '已经是最新版本啦！'
   }
 }

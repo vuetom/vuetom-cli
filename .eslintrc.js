@@ -1,8 +1,6 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: [
-    'typescript'
-  ],
+  'parser': '@typescript-eslint/parser',
+  'plugins': ['@typescript-eslint'],
   'env': {
     'browser': true,
     'node': true,
@@ -11,10 +9,6 @@ module.exports = {
   'extends': [
     'eslint:recommended'
   ],
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly'
-  },
   'parserOptions': {
     'parser': 'babel-eslint',
     'ecmaVersion': 2018,

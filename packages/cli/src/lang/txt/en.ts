@@ -31,5 +31,15 @@ export default {
     versionCheck: 'Make Sure Templates(temp-blog/temp-docs)\'s Version >= vitepress-theme-vuetom\'s Version',
     versionShow: 'Version Show',
     versionWarn: 'This version < theme version. You\'d better wait for the update'
+  },
+  update: {
+    updateCheck: 'Checking for updates...',
+    updateOk: 'Update Completed!',
+    updateTo: 'Update to',
+    updateNoBack: 'The version cannot be rolled back',
+    updateCan: 'Update available!',
+    run: 'Run',
+    toUpdate: 'to update.',
+    noUpdate: 'It is the latest version!'
   }
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const logger = require('./logger')
-const request = require('request')
+const axios = require('axios')
 const chalk = require('chalk')
 
 process.on('exit', () => {
@@ -11,45 +11,43 @@ process.on('exit', () => {
 })
 
 function print (branchName: string) {
-  request(
-    {
-      url: `https://api.github.com/repos/lauset/vuetom-cli/branches/${branchName}`,
-      headers: {
-        'User-Agent': ''
-      }
-    },
-    (err: any, res: any, body: any) => {
-      if (err) logger.fatal(err)
-      const requestBody = JSON.parse(body)
-      if (requestBody) {
-        const r = requestBody
+  axios({
+    url: `https://api.github.com/repos/lauset/vuetom-cli/branches/${branchName}`,
+    method: 'get',
+    headers: {
+      'User-Agent': ''
+    }
+  })
+    .then(function (resp: any) {
+      if (resp.status === 200) {
+        const r = resp.data
         try {
           console.log()
           console.log(`  Branch => ${chalk.yellow(branchName)} update information:`)
           console.log()
           console.log(
             '  ' +
-              chalk.hex('#FFC0CB')('>>> name :') +
-              '  ' +
-              chalk.hex('#00FFFF')(r.name)
+            chalk.hex('#FFC0CB')('>>> name :') +
+            '  ' +
+            chalk.hex('#00FFFF')(r.name)
           )
           console.log(
             '  ' +
-              chalk.hex('#FFC0CB')('>>>  msg :') +
-              '  ' +
-              chalk.hex('#00FFFF')(r.commit.commit.message)
+            chalk.hex('#FFC0CB')('>>>  msg :') +
+            '  ' +
+            chalk.hex('#00FFFF')(r.commit.commit.message)
           )
           console.log(
             '  ' +
-              chalk.hex('#FFC0CB')('>>> date :') +
-              '  ' +
-              chalk.hex('#00FFFF')(r.commit.commit.committer.date)
+            chalk.hex('#FFC0CB')('>>> date :') +
+            '  ' +
+            chalk.hex('#00FFFF')(r.commit.commit.committer.date)
           )
           console.log(
             '  ' +
-              chalk.hex('#FFC0CB')('>>>  url :') +
-              '  ' +
-              chalk.hex('#00FFFF')(r._links.html)
+            chalk.hex('#FFC0CB')('>>>  url :') +
+            '  ' +
+            chalk.hex('#00FFFF')(r._links.html)
           )
         } catch {
           console.log()
@@ -57,10 +55,9 @@ function print (branchName: string) {
           console.log()
         }
       } else {
-        console.error(requestBody.message)
+        console.error()
       }
-    }
-  )
+    })
 }
 
 function list () {
